@@ -206,17 +206,8 @@ void set_keylog(uint16_t keycode, keyrecord_t *record) {
   keylogs_str_idx++;
 }
 
-const char *read_keylog(void) {
-  return keylog_str;
-}
-
-const char *read_keylogs(void) {
-  return keylogs_str;
-}
-//new
-
 bool oled_task_user(void) {
-  if (is_keyboard_master()) {
+  if (!is_keyboard_master()) {
     // Host Keyboard Layer Status
     oled_write_P(PSTR("Layer: "), false);
 
@@ -237,8 +228,10 @@ bool oled_task_user(void) {
         oled_write_ln_P(PSTR("Undefined"), false);
     }
 
-    oled_write_ln(read_keylog(), false);
-    oled_write_ln(read_keylogs(), false);
+    // oled_write_ln(read_keylog(), false);
+    // oled_write_ln(read_keylogs(), false);
+    oled_write_ln("Durock L7 62g");
+    oled_write_ln("MT3 Susuwatari");
 
   } else {
       render_logo();
