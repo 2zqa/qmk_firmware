@@ -14,12 +14,9 @@ Welcome to my little section in the QMK readme file.
 
 I have the following keymaps to my name:
 
-```
-2zqa@fedora:~/qmk_firmware$ find . -type d -name '2zqa'
-./keyboards/dz60/keymaps/2zqa
-./keyboards/kbdfans/kbd8x/keymaps/2zqa
-./keyboards/lily58/keymaps/2zqa
-```
+* [dz60](./keyboards/dz60/keymaps/2zqa/)
+* [kbdfans/kbd8x](./keyboards/kbdfans/kbd8x/keymaps/2zqa/)
+* [lily58](./keyboards/lily58/keymaps/2zqa)
 
 *The original README continues below*
 
